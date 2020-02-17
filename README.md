@@ -7,11 +7,14 @@
 3. 再复制到/usr/.fonts/
 4. sudo fc-cache -fv
 5. ~/.cache/matplotlib -fr
-6. 修改配置文件matplotlibrc<br>
+6. 查看ttf文件对应的字体名称<br>
+from matplotlib.font_manager import FontManager<br>
+FontManager().ttflist
+7. 修改配置文件matplotlibrc<br>
 font.family         : sans-serif<br>
 font.sans-serif     : ..., Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif<br>
 axes.unicode_minus  :False
-7. 运行下面内容<br>
+8. 运行下面内容<br>
 from matplotlib.font_manager import _rebuild<br>
 _rebuild()
-8. 重启
+9. 重启
