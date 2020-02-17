@@ -7,10 +7,11 @@
 3. 再复制到/usr/.fonts/
 4. sudo fc-cache -fv
 5. ~/.cache/matplotlib -fr
-6. 修改配置文件matplotlibrc
-font.family         : sans-serif        
-font.sans-serif     : ..., Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif   axes.unicode_minus  :False
+6. 修改配置文件matplotlibrc<br>
+font.family         : sans-serif<br>     
+font.sans-serif     : ..., Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif<br>
+axes.unicode_minus  :False
 7. 运行下面内容
-from matplotlib.font_manager import _rebuild
+from matplotlib.font_manager import _rebuild<br>
 _rebuild()
 8. 重启
