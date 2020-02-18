@@ -21,4 +21,4 @@ _rebuild()
 
 ## How to use scatter method with a given radius series?
 
-See [hear]!(https://stackoverflow.com/questions/48172928/scale-matplotlib-pyplot-axes-scatter-markersize-by-x-scale/48174228#48174228)
+See [hear](https://stackoverflow.com/questions/48172928/scale-matplotlib-pyplot-axes-scatter-markersize-by-x-scale/48174228#48174228)!
