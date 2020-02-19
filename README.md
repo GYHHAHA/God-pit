@@ -33,3 +33,8 @@ See [here](https://stackoverflow.com/questions/48172928/scale-matplotlib-pyplot-
 >>>lgnd.legendHandles[0]._sizes = [30]
 >>>lgnd.legendHandles[1]._sizes = [30]
 ```
+## How to make a round legend without scatter method?
+
+```python
+>>>ax.legend([Line2D(range(1), range(1), color="white", marker='o', markerfacecolor="red")],['a'])
+```
