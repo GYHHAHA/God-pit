@@ -22,3 +22,14 @@ _rebuild()
 ## How to use scatter method with a given radius series?
 
 See [here](https://stackoverflow.com/questions/48172928/scale-matplotlib-pyplot-axes-scatter-markersize-by-x-scale/48174228#48174228)!
+
+## How to fix the legend handlers into given sizes?
+
+```python
+fig,ax = plt.subplots(1,1)
+l1 = ax.scatter([0],[0], color='', marker='o', edgecolors='r', s=2000)
+l2 = ax.scatter(np.random.randn(50),np.random.randn(50))
+lgnd = ax.legend([l1,l2],['a','b'], loc='center',title='GYH',framealpha=0.5)
+lgnd.legendHandles[0]._sizes = [30]
+lgnd.legendHandles[1]._sizes = [30]
+```
