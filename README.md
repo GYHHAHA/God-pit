@@ -2,22 +2,22 @@
 
 ## How to configurate default custom fonts in matplotlib?
 
-1. 下载ttf文件到/usr/share/fonts/truetype/
-2. 同时复制到matplotlib的安装文件夹的mpl-data/fonts/ttf/
-3. 再复制到/usr/.fonts/
+1. Download 'file_name.ttf' to /usr/share/fonts/truetype/
+2. Copy the file in step 1 to mpl-data/fonts/ttf/ which locates at matplotlib's install file folder
+3. Then copy the same file to /usr/.fonts/
 4. sudo fc-cache -fv
 5. ~/.cache/matplotlib -fr
-6. 查看ttf文件对应的字体名称<br>
+6. Check the real name for the 'ttf' file<br>
 from matplotlib.font_manager import FontManager<br>
 FontManager().ttflist
-7. 修改配置文件matplotlibrc<br>
+7. Change the default configurations in matplotlibrc<br>
 font.family         : sans-serif<br>
 font.sans-serif     : ..., Bitstream Vera Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif<br>
 axes.unicode_minus  :False
-8. 运行下面内容<br>
+8. Run the following codes<br>
 from matplotlib.font_manager import _rebuild<br>
 _rebuild()
-9. 重启
+9. Reboot
 
 ## How to use scatter method with a given radius series?
 
