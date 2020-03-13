@@ -40,6 +40,7 @@ See [here](https://stackoverflow.com/questions/48172928/scale-matplotlib-pyplot-
 ```
 ## Set customed font in r-base plot:
 
+If you use Rmarkdown, you should add `{r, echo=FALSE, fig.showtext=TRUE ,message=FALSE}` to the chunk head.
 ```r
 >>>library(showtext)
 >>>showtext_auto(enable = TRUE)
