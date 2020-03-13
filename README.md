@@ -38,3 +38,21 @@ See [here](https://stackoverflow.com/questions/48172928/scale-matplotlib-pyplot-
 ```python
 >>>ax.legend([Line2D(range(1), range(1), color="white", marker='o', markerfacecolor="red")],['a'])
 ```
+## Set customed font in r-base plot:
+
+```r
+>>>library(showtext)
+>>>showtext_auto(enable = TRUE)
+>>>font_add('...', '....ttf')
+>>>pdf('~/Desktop/test2/test.pdf')
+>>>plot(c(1:10), xlab = 'ddsd', ylab = 'asdfsd', 
+     main = '更改的字体', family = '...')
+>>>dev.off()
+```
+```r
+>>>library(ggplot2)
+>>>ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point() +
++++        ggtitle("Fuel Efficiency of 32 Cars") +
++++        xlab("you can 更改r-base中的字体 now") + ylab("Miles per Gallon")+
++++        theme(text=element_text(family="..."))
+```
