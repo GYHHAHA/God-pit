@@ -51,8 +51,8 @@ See [here](https://stackoverflow.com/questions/48172928/scale-matplotlib-pyplot-
 ```
 ```r
 >>>library(ggplot2)
->>>ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point() +
-+++        ggtitle("Fuel Efficiency of 32 Cars") +
-+++        xlab("you can 更改r-base中的字体 now") + ylab("Miles per Gallon")+
-+++        theme(text=element_text(family="..."))
+>>>ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point() SegoePrint+
+...        ggtitle("Fuel Efficiency of 32 Cars") +
+...        xlab("you can 更改r-base中的字体 now") + ylab("Miles per Gallon")+
+...        theme(text=element_text(family="..."))
 ```
