@@ -1,0 +1,83 @@
+---
+title: "Now it's time to use customed fonts!!! "
+author: "GYH"
+date: "March 2020"
+output:
+  pdf_document:
+    latex_engine: xelatex
+  word_document: default
+header-includes:
+  - \usepackage{ctex}
+  - \usepackage{fontspec}
+  - \setmainfont{SegoePrint}
+  - \everymath{\displaystyle} 
+  - \usepackage{amsmath}
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Display:
+
+First, we will test on \LaTeX: $\Sigma_{k=1}^{n}k^{2}$,  $\iint_{\mathbb{R}^2}\frac{x}{y}d\omega$. It seems perfect!
+
+$$\sum_{n=1}^{\infty} 2^{-n} = 1$$
+
+# Plots:
+
+Then, let us check several key points:
+\newline
+(a) r-base plot
+```{r, fig.showtext=TRUE, message=FALSE,fig.height = 2.5, fig.width = 4.8,fig.align = "center"}
+library(showtext)
+showtext_auto(enable = TRUE)
+font_add('SegoePrint', 'SegoePrint.ttf')
+plot(pressure,xlab='You can change the font now!',family='SegoePrint',tck=-0.05
+                                                         ,main='r-base plot'
+                                                         ,cex=0.6,cex.main=1
+                                                         ,cex.lab=0.9,cex.axis=0.7)
+```
+(b) ggplot2
+
+```{r, fig.showtext=TRUE, message=FALSE,fig.height = 3.3, fig.width = 4,fig.align = "center"}
+library(ggplot2)
+library(quantmod)
+data("economics", package = "ggplot2")
+economics$returns_perc <- c(0, diff(economics$psavert)/
+economics$psavert[-length(economics$psavert)])
+brks <- economics$date[seq(1, length(economics$date), 12)]
+lbls <- lubridate::year(economics$date[seq(1,
+length(economics$date), 12)])
+ggplot(economics[1:100, ], aes(date, returns_perc)) +
+    geom_area() +
+    scale_x_date(breaks=brks, labels=lbls) +
+    theme(axis.text.x = element_text(angle=90)) +
+    labs(title="Area Chart",
+    y="Returns for Personal savings",
+    caption="Source: economics")+
+    theme(plot.title = element_text(hjust = 0.5))+
+    theme(text=element_text(family="SegoePrint",size=9))
+```
+(c) r-base plot with chinese
+```{r, fig.showtext=TRUE, message=FALSE,fig.height = 2.8, fig.width = 4.8,fig.align = "center"}
+font_add('Seafood', 'Seafood.ttf')
+plot(pressure,xlab='现在可以更改字体了！',family='Seafood',tck=-0.05
+                                                         ,main='基础包作图'
+                                                         ,cex=0.6,cex.main=1.3
+                                                         ,cex.lab=1.2,cex.axis=1.05)
+```
+(d) ggplot2 with chinese
+
+```{r, fig.showtext=TRUE, message=FALSE,fig.height = 3.3, fig.width = 4,fig.align = "center"}
+library(ggplot2)
+library(quantmod)
+ggplot(economics[1:100, ], aes(date, returns_perc)) +
+    geom_area() +
+    scale_x_date(breaks=brks, labels=lbls) +
+    theme(axis.text.x = element_text(angle=90)) +
+    labs(title="分区图",
+    y="个人储蓄的回报",
+    caption="来源： Economics")+
+    theme(plot.title = element_text(hjust = 0.5))+
+    theme(text=element_text(family="Seafood",size=13))
+```
