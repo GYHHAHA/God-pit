@@ -57,3 +57,14 @@ If you use Rmarkdown, you should add `{r, echo=FALSE, fig.showtext=TRUE ,message
 ...        xlab("you can 更改r-base中的字体 now") + ylab("Miles per Gallon")+
 ...        theme(text=element_text(family="..."))
 ```
+## How to input Chinese character in RStudio on Linux?
+
+See [here](https://github.com/JackieMium/libfcitxplatforminputcontextplugin.so). This is the only way works for me!
+
+## How to custom template in RStudio?
+
+See [here](https://chester.rbind.io/ecots2k16/template_pkg/). And you can also recustom in your r template package easily.
+
+## How to mix python and r up in Rmarkdown?
+
+See instruction from `fix.pdf` in the folder.
