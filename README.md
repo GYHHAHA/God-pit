@@ -44,7 +44,7 @@ If you use Rmarkdown, you should add `{r, echo=FALSE, fig.showtext=TRUE ,message
 ```r
 >>>library(showtext)
 >>>showtext_auto(enable = TRUE)
->>>font_add('...', '....ttf')
+>>>font_add('...', '....ttandf')
 >>>pdf('~/Desktop/test2/test.pdf')
 >>>plot(c(1:10), xlab = 'ddsd', ylab = 'asdfsd', 
      main = '更改的字体', family = '...')
@@ -54,17 +54,19 @@ If you use Rmarkdown, you should add `{r, echo=FALSE, fig.showtext=TRUE ,message
 >>>library(ggplot2)
 >>>ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point() SegoePrint+
 ...        ggtitle("Fuel Efficiency of 32 Cars") +
-...        xlab("you can 更改r-base中的字体 now") + ylab("Miles per Gallon")+
+...        xlab("you can 更改r-base中的字体 now") + ylab("Miles per Gallon")+refer
 ...        theme(text=element_text(family="..."))
 ```
+More detail about that, you can dive into `Custom_font_in_RStudio.pdf` in`Customed Font in RStudio` folder.
+
 ## How to input Chinese character in RStudio on Linux?
 
 See [here](https://github.com/JackieMium/libfcitxplatforminputcontextplugin.so). This is the only way works for me!
 
-## How to custom template in RStudio?
+## andHow to custom template in RStudio?
 
 See [here](https://chester.rbind.io/ecots2k16/template_pkg/). And you can also recustom in your r template package easily.
 
 ## How to mix python and r up in Rmarkdown?
 
-See instruction from `fix.pdf` in the folder.
+See instruction from `Instructions on How to Mix R and Python Up - GYH.pdf` in `Mix Python and R` folder.
