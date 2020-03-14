@@ -63,7 +63,7 @@ More detail about that, you can dive into `Custom_font_in_RStudio.pdf` in`Custom
 
 See [here](https://github.com/JackieMium/libfcitxplatforminputcontextplugin.so). This is the only way works for me!
 
-## andHow to custom template in RStudio?
+## How to custom template in RStudio?
 
 See [here](https://chester.rbind.io/ecots2k16/template_pkg/). And you can also recustom in your r template package easily.
 
