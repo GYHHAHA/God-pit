@@ -70,3 +70,10 @@ See [here](https://chester.rbind.io/ecots2k16/template_pkg/). And you can also r
 ## How to mix python and r up in Rmarkdown?
 
 See instruction from `Instructions on How to Mix R and Python Up - GYH.pdf` in `Mix Python and R` folder.
+
+## How to connect your musescore with music21's PNG shower?
+
+```python
+from music21 import environmnet
+environment.set("musescoreDirectPNGPath", "/usr/bin/musescore")
+```
