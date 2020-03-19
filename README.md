@@ -77,3 +77,7 @@ See instruction from `Instructions on How to Mix R and Python Up - GYH.pdf` in `
 from music21 import environmnet
 environment.set("musescoreDirectPNGPath", "/usr/bin/musescore")
 ```
+
+## What can you do if get a RStudio-Server wrong exit mode while installing?
+
+Delete /etc/rstudio/rserver.conf 
