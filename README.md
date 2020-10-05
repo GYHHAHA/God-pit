@@ -81,3 +81,9 @@ environment.set("musescoreDirectPNGPath", "/usr/bin/musescore")
 ## What can you do if get a RStudio-Server wrong exit mode while installing?
 
 Delete /etc/rstudio/rserver.conf 
+
+## How to get max length of consecutive zeros in a given array?
+
+```python
+np.diff(np.flatnonzero(np.diff(np.r_[0,(x.diff())==1,0]))).max()+1
+```
