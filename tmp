@@ -1,0 +1,29 @@
+unittest-data-provider: This plugin allows you to provide test data using a decorator approach in order to run multiple sets of data in the same test case.
+
+unittest-mixins: unittest-mixins is a library that provides a set of reusable test classes (mixins) for extending the unittest.
+
+unittest-xml-reporting: This plugin generates XML reports of test results for easy integration with other tools or for visual presentation of test results.
+
+parameterized: parameterized is a plugin for parameterized testing that allows you to define multiple sets of input data in test cases using a decorator approach, simplifying the process of writing repetitive test code.
+
+unittest-html-report: This plugin generates beautiful HTML reports with summaries, details and statistics of test results.
+
+pytest-cov:
+
+Generate code coverage reports to help evaluate the coverage of code by test cases. Multiple report formats are supported, including text, HTML and XML. files or directories to be analyzed for code coverage can be specified via configuration files or command line options.
+
+pytest-html:
+
+Generates beautiful HTML reports that show detailed information and statistics about test results. Provides an interactive interface for viewing test case execution and error messages. Customize the style and appearance of the report.
+
+pytest-metadata:
+
+Adds metadata to test results, such as author, version number, test environment, and other information. This metadata can be displayed in the test report to provide more comprehensive contextual information.
+
+pytest-mock:
+
+Integrates with Python's mock library to simplify mocking and assertion of dependent objects. Provides a convenient decorator and context manager for creating and configuring mock objects. Supports validating calls to mock objects and asserting expected behavior.
+
+pytest-timeout:
+
+Sets the maximum execution time of test cases to prevent long runs from causing the overall test process to block. Timeout can be set for each test case individually, or a default timeout can be applied globally. Flexible configuration options are provided to allow custom actions to be performed when the timeout occurs.
